@@ -1,105 +1,50 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Website</title>
-  <meta charset="utf-8">
+    <title>My Website</title>
+    <meta charset="utf-8">
 
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      background: black;
-    }
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
 
-    .myDiv {
-      background-image: url('./peter-th.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
+        .myDiv {
+            background-image: url('./peter-th.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* Welcome Link */
-    #playLink {
-      color: white;
-      font-size: 40px;
-      font-weight: bold;
-      text-decoration: none;
-      background: rgba(0,0,0,0.5);
-      padding: 20px 40px;
-      border-radius: 10px;
-    }
-
-    /* Fullscreen Video */
-    #myVideo {
-      display: none;
-
-      position: fixed;
-      top: 0;
-      left: 0;
-
-      width: 100vw;
-      height: 100vh;
-
-      object-fit: cover;
-      background: black;
-
-      z-index: 9999;
-    }
-  </style>
+        #playLink {
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            text-decoration: none;
+            background: rgba(0,0,0,0.5);
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
-<body>
+<body background-image="./peter-th.jpg">
 
-  <!-- Home Page -->
-  <div class="myDiv">
-
-    <a href="#" id="playLink">
-      WELCOME TO MY NEW WORLD
-    </a>
-
-  </div>
-
-  <!-- Fullscreen Video -->
-  <video id="myVideo" autoplay playsinline >
-    <source src="./My Video2.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <script>
-
-    const link = document.getElementById("playLink");
-    const video = document.getElementById("myVideo");
-   
-
-    // Click welcome link
-    link.addEventListener("click", function(event) {
-
-      event.preventDefault();
-
-      // Hide link and background page
-      document.querySelector(".myDiv").style.display = "none";
-
-      // Show video
-      video.style.display = "block";
-
-      // Play video automatically
-      video.play();
-
-    });
-
-    // After video ends
-    video.addEventListener("ended", function() {
-
-      // Navigate to main page
-      window.location.href = "https://sites.google.com/site/satyamanikantakunapareddi";
-
-    });
-
-  </script>
+    <div class="myDiv">
+        <a
+          id="playLink"
+          href="https://sites.google.com/site/satyamanikantakunapareddi"
+        >
+            WELCOME TO MY NEW WORLD
+        </a>
+    </div>
 
 </body>
 </html>
